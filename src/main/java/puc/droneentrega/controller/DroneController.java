@@ -19,9 +19,9 @@ public class DroneController {
 
     @PostMapping(path="/criar")
     public ResponseEntity<String> criarDrone(@RequestParam("nomeDrone") String nomeDrone,
-                                              @RequestParam("modeloDrone") String modeloDrone,
-                                              @RequestParam("corDrone") String corDrone,
-                                              @RequestParam ("anoDrone") String anoDrone) throws Exception {
+                                             @RequestParam("modeloDrone") String modeloDrone,
+                                             @RequestParam("corDrone") String corDrone,
+                                             @RequestParam ("anoDrone") String anoDrone) throws Exception {
         droneFacade.criarDrone(nomeDrone, modeloDrone, corDrone, anoDrone);
         return new ResponseEntity<>("DRONE SALVO", HttpStatus.OK);
     }
